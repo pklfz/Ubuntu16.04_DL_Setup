@@ -1,5 +1,5 @@
 # Ubuntu16.04_DL_Setup
-Set Theano+Tensorflow+mxnet on Ubuntu16.04+CUDA8.0+cuDNNv5
+Set Theano+Tensorflow+mxnet on Ubuntu16.04+CUDA8.0+cuDNNv5.1
 
 # 从0开始搭建Ubuntu16.04深度学习工作站
 ### 硬件配置
@@ -17,12 +17,12 @@ Set Theano+Tensorflow+mxnet on Ubuntu16.04+CUDA8.0+cuDNNv5
 > Theano
 
 > Tensorflow
-> -python3.5+CUDA8+cuDNNv5
+> -python3.5+CUDA8+cuDNNv5.1
 
 > Keras
 
 > mxnet
-> -python3.5+CUDA8+cuDNNv5+opencv2
+> -python3.5+CUDA8+cuDNNv5.1+opencv2
 
 > optional: xgboost
 
@@ -204,12 +204,12 @@ make
 
 > http://www.52nlp.cn/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%BB%E6%9C%BA%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-ubuntu16-04-geforce-gtx1080-tensorflow
 
-### 12. 配置cuDNN v5
+### 12. 配置cuDNN v5.1
 下载
 > https://developer.nvidia.com/rdp/cudnn-download
 
 ```
-tar -zxvf cudnn-8.0-linux-x64-v5.0-ga.tgz
+tar -zxvf cudnn-8.0-linux-x64-v5.1-ga.tgz
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
 sudo chmod a+r /usr/local/cuda/include/cudnn.h
@@ -243,9 +243,9 @@ sudo apt-get install libcurl3 libcurl3-dev zlib1g-dev
 选择y和默认配置
 ```
 
-*注意*：
-在`third_party/gpus/crosstool/CROSSTOOL`中寻找`cxx_builtin_include_directory`，并追加
-`cxx_builtin_include_directory: "/usr/local/cuda-8.0/include"`
+<!--*注意*：-->
+<!--在`third_party/gpus/crosstool/CROSSTOOL`中寻找`cxx_builtin_include_directory`，并追加-->
+<!--`cxx_builtin_include_directory: "/usr/local/cuda-8.0/include"`-->
 
 编译，较慢
 ```
