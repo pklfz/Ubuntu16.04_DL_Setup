@@ -222,12 +222,12 @@ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 sudo apt-get install python-pip
 sudo apt-get install python-numpy swig python-dev python-wheel
 
-wget https://github.com/bazelbuild/bazel/releases/download/0.3.0/bazel-0.3.0-installer-linux-x86_64.sh
-chmod +x bazel-0.3.0-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.3.2/bazel-0.3.2-installer-linux-x86_64.sh
+chmod +x bazel-0.3.2-installer-linux-x86_64.sh
 sudo apt-get update
 sudo apt-get install default-jre
 sudo apt-get install default-jdk
-./bazel-0.3.0-installer-linux-x86_64.sh --user
+./bazel-0.3.2-installer-linux-x86_64.sh --user
 
 vim ~/.bashrc
 source /home/pklfz/.bazel/bin/bazel-complete.bash
